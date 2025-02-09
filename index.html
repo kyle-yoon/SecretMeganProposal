@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url('flower_patch.jpg'); /* Replace with your flower patch image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #333;
+            position: absolute;
+            top: 10%;
+            width: 100%;
+            text-align: center;
+        }
+        button {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            position: absolute;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        #yes {
+            background-color: #4caf50;
+            color: white;
+            left: 40%;
+            top: 50%;
+        }
+        #no {
+            background-color: #f44336;
+            color: white;
+            left: 60%;
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Can I Be Your Boyfriend?</h1>
+    <button id="yes" onclick="window.location.href='celebration.html'">Yes</button>
+    <button id="no">No</button>
+
+    <script>
+        const noButton = document.getElementById('no');
+        const phrases = [
+            "Are you sure?",
+            "But I thought you loved me...",
+            "What would Seb think of this?",
+            "Please reconsider!",
+            "This will break my heart...",
+            "This isn't funny Megan Bimsenstein Sykes",
+            "You are never seeing my dick again",
+            "I thought you are mine",
+            "But my pretty girl :(",
+            "The yes button looks good",
+            "Fuck you",
+            "This is because of the Red Bull incident isn't it",
+            "This feels like a Netflix breakup scene",
+            "I'll cry, you know",
+            "Do you need me to beg",
+            "I'll tell your mom you said no",
+            "Guess I’m starting an OnlyFans",
+            "But why :(",
+            "Please Megan",
+            "Wrong button",
+            "No",
+        ];
+
+        let currentPhraseIndex = 0;
+
+        noButton.addEventListener('mouseenter', () => {
+            // Change the text of the button
+            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+            noButton.textContent = phrases[currentPhraseIndex];
+
+            // Move the button to a random position
+            const randomX = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const randomY = Math.random() * (window.innerHeight - noButton.offsetHeight);
+
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
+        });
+    </script>
+</body>
+</html>
+<!--     <div class="heart" style="left: 20%;"></div>
+ -->            

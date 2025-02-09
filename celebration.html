@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yay! 🎉</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('FlowersValley.jpg') no-repeat center center/cover;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            color: #ff3366;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5rem;
+            color: #ff3366;
+            margin-bottom: 30px;
+        }
+        img {
+            width: 500px;
+            animation: bigBounce 0.8s infinite ease-in-out;
+            z-index: 10;
+        }
+        @keyframes bigBounce {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-50px) scale(1.1);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Confetti styles */
+        .confetti {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ffcc00;
+            animation: fall 3s linear infinite;
+        }
+        .confetti:nth-child(2n) {
+            background-color: #ff3366;
+        }
+        .confetti:nth-child(3n) {
+            background-color: #33ccff;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) translateX(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) translateX(30vw) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Floating hearts */
+        .heart {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #ff3366;
+            clip-path: polygon(50% 0%, 100% 37%, 82% 100%, 50% 75%, 18% 100%, 0% 37%);
+            animation: float 6s linear infinite;
+            opacity: 0.8;
+            z-index: 5;
+        }
+        .heart:nth-child(2n) {
+            background-color: #ff6699;
+            animation-duration: 5s;
+        }
+        .heart:nth-child(3n) {
+            background-color: #ff99cc;
+            animation-duration: 7s;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(1);
+            }
+            100% {
+                transform: translateY(-100vh) translateX(50px) scale(1.2);
+            }
+        }
+
+        /* Fireworks */
+        .firework {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: radial-gradient(circle, #ec0841, transparent);
+            border-radius: 50%;
+            animation: explode 3s linear infinite;
+        }
+        .firework::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 99, 132, 0.6), transparent);
+            animation: pulse 2s linear infinite;
+        }
+        @keyframes explode {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(3);
+                opacity: 0.6;
+            }
+            100% {
+                transform: scale(5);
+                opacity: 0;
+            }
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Yay! 🎉</h1>
+    <p>I Love You Megan ❤️</p>
+    <img src="Megan Proposal.png">
+
+    <!-- Confetti -->
+    <div class="confetti" style="left: 5%;"></div>
+    <div class="confetti" style="left: 10%;"></div>
+    <div class="confetti" style="left: 15%;"></div>
+    <div class="confetti" style="left: 20%;"></div>
+    <div class="confetti" style="left: 25%;"></div>
+    <div class="confetti" style="left: 30%;"></div>
+    <div class="confetti" style="left: 35%;"></div>
+    <div class="confetti" style="left: 40%;"></div>
+    <div class="confetti" style="left: 45%;"></div>
+    <div class="confetti" style="left: 50%;"></div>
+    <div class="confetti" style="left: 55%;"></div>
+    <div class="confetti" style="left: 60%;"></div>
+    <div class="confetti" style="left: 65%;"></div>
+    <div class="confetti" style="left: 70%;"></div>
+    <div class="confetti" style="left: 75%;"></div>
+    <div class="confetti" style="left: 80%;"></div>
+    <div class="confetti" style="left: 85%;"></div>
+    <div class="confetti" style="left: 90%;"></div>
+
+    <!-- Floating hearts -->
+    <div class="heart" style="left: 10%;"></div>
+    <div class="heart" style="left: 30%;"></div>
+    <div class="heart" style="left: 50%;"></div>
+    <div class="heart" style="left: 70%;"></div>
+    <div class="heart" style="left: 90%;"></div>
+
+    <!-- Fireworks -->
+    <div class="firework" style="top: 20%; left: 30%;"></div>
+    <div class="firework" style="top: 40%; left: 60%;"></div>
+    <div class="firework" style="top: 10%; left: 50%;"></div>
+    <div class="firework" style="top: 50%; left: 20%;"></div>
+    <div class="firework" style="top: 30%; left: 80%;"></div>
+</body>
+</html>
